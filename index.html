@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Why Absent · HackPrinceton Fall 2026</title>
+<title>Roll Call Pitch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -401,7 +401,7 @@
   #tech .why p { font-size: 19px; line-height: 1.4; }
   #tech .boundary { margin-top: 22px; padding: 16px 28px; font-size: 21px; }
 
-/* ================= Why Absent additions (same system as the original) ================= */
+/* ================= Roll Call additions (same system as the original) ================= */
 .cv-url{position:absolute;left:0;right:0;top:146px;text-align:center;font-family:var(--mono);font-size:24px;color:var(--forest);z-index:3;letter-spacing:.01em}
 .cv-url i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--lime);margin-right:12px;box-shadow:0 0 0 4px rgba(61,220,132,.25);vertical-align:2px}
 .active .cv-url i{animation:blink 1.4s ease-in-out infinite}
@@ -570,6 +570,198 @@
 #demo .dapp .rate b,#demo .dapp .rbar span{color:var(--ink)}
 #stk .stack{margin-top:44px}#stk .layer{padding:30px 30px 34px}#stk .layer li{font-size:23px}
 #stk .why{margin-top:30px}#stk .boundary{margin-top:30px}
+
+/* ================= slide 4: how it finds the cause ================= */
+#how h2{font-size:56px;max-width:1700px}
+#how .hw{display:grid;grid-template-columns:1fr 860px;gap:56px;margin-top:26px;align-items:start}
+.cfile{background:var(--night);color:#e8edf3;border-radius:20px;padding:22px 28px;font-size:22px;line-height:1.45}
+.cfile small{display:block;font-family:var(--mono);font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin-bottom:6px}
+.cfile b{color:#fff;font-weight:600}
+.dets{display:grid;gap:10px;margin-top:14px}
+.det{all:unset;box-sizing:border-box;display:grid;grid-template-columns:1fr auto;gap:6px 18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 22px;transition:border-color .2s,box-shadow .2s}
+.det:hover{border-color:var(--sage)}
+.det .lb{font-family:var(--mono);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.det h3{font-size:24px;grid-column:1}
+.det .sees{grid-column:1;font-size:19px;color:var(--ink-soft);line-height:1.4;max-height:0;overflow:hidden;transition:max-height .35s ease}
+.det.open .sees{max-height:90px}
+.det.open h3{display:none}
+.lim{margin-top:14px;font-size:17px;color:var(--muted);line-height:1.45}
+.lim b{color:var(--ink)}
+.det .vd{grid-row:1/3;grid-column:2;opacity:0;transform:scale(.9);transition:opacity .3s,transform .3s}
+.det.open .vd{opacity:1;transform:none}
+.det .hint{grid-row:1/3;grid-column:2;font-family:var(--mono);font-size:14px;color:var(--muted)}
+.det.open .hint{display:none}
+.det.win{border-color:var(--forest);box-shadow:0 0 0 2px var(--lime-soft)}
+.det.win.open{background:var(--lime-soft)}
+.openall{all:unset;cursor:pointer;font-family:var(--mono);font-size:16px;color:var(--forest);margin-top:12px;display:inline-block}
+.res{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 32px}
+.res .rh{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:6px}
+.res .rh b{font-family:var(--display);font-size:26px}
+.res .seg{margin:0}
+.res .seg button{font-size:14px;padding:7px 14px}
+.res .sub{font-size:17px;color:var(--muted);margin-bottom:12px}
+.hb{display:grid;grid-template-columns:170px 1fr 70px;gap:14px;align-items:center;padding:7px 0;font-size:19px}
+.hb .tr{height:26px;background:#ecebe5;border-radius:7px;overflow:hidden}
+.hb .tr i{display:block;height:100%;width:0;background:#c4c3bb;border-radius:7px;transition:width .7s cubic-bezier(.2,.7,.3,1)}
+.hb.win .tr i{background:var(--forest)}
+.hb.win span:first-child{font-weight:600}
+.hb span:last-child{font-family:var(--mono);text-align:right;font-size:20px}
+.res .cap{font-size:17px;color:var(--ink-soft);margin-top:10px;line-height:1.45;min-height:50px}
+.luck{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 32px;display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:center}
+.luck h3{font-size:24px;margin-bottom:4px}
+.luck p{font-size:18px;line-height:1.4}
+.luck .go{margin-top:10px;font-size:16px;padding:8px 14px}
+.hist{height:110px;display:flex;align-items:flex-end;gap:5px;border-bottom:2px solid var(--line);position:relative}
+.hist i{flex:1;background:var(--sage);border-radius:3px 3px 0 0;height:0;transition:height .5s cubic-bezier(.2,.7,.3,1)}
+.hist i.obs{background:var(--red)}
+.hist .ax{position:absolute;left:0;right:0;bottom:-24px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.luck .out{font-family:var(--mono);font-size:16px;color:var(--forest);margin-top:8px;min-height:22px}
+#how .boundary{margin-top:20px;padding:14px 26px;font-size:21px}
+
+/* demo: two-stage cluster cards */
+.stg{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.stg span{font-family:var(--mono);font-size:13px;padding:4px 10px;border-radius:999px;background:#f2f2ef;color:var(--ink-soft)}
+.stg span.on{background:var(--lime-soft);color:var(--forest)}
+.oe{display:flex;gap:16px;font-family:var(--mono);font-size:14px;color:var(--muted);margin-top:8px}
+.oe b{color:var(--ink);font-weight:500}
+
+/* slide 2: keep the cards clear of the footer */
+.probs{gap:12px}.prob{padding:20px 28px}.prob h3{margin:6px 0 6px}
+
+/* slide 5 tracks row */
+#stk .tracks{position:static;margin-top:16px}
+#stk .stack{margin-top:28px}#stk .layer{padding:22px 26px 24px}#stk .layer h3{margin:8px 0 12px}#stk .layer li{font-size:20px}
+#stk .why{margin-top:16px}#stk .why>div{padding:16px 24px}#stk .boundary{margin-top:16px;padding:12px 26px;font-size:20px}
+#stk .tracks .chips{flex-wrap:nowrap;gap:10px}#stk .tracks .chips span{font-size:18px;padding:9px 16px}#stk .tracks .chips span em{font-size:16px}
+
+/* ---------- cover: parent texts the school ---------- */
+.scene{position:absolute;left:50%;top:400px;width:1080px;margin-left:-540px;z-index:2;display:grid;grid-template-columns:360px 1fr 420px;gap:10px;align-items:end}
+.scene .phone{width:360px;height:600px}
+.scene .bub{font-size:17px}
+.sc-link{align-self:center;display:grid;justify-items:center;gap:10px;padding-bottom:120px}
+.sc-link svg{width:220px;height:120px}
+.sc-tag{font-family:var(--mono);font-size:17px;color:var(--forest);background:var(--lime-soft);padding:6px 14px;border-radius:999px;white-space:nowrap}
+.sc-school{display:grid;gap:12px;padding-bottom:36px}
+.sc-school svg{width:420px;height:auto;display:block}
+.sc-school .lt-ok{font-size:18px;box-shadow:0 20px 40px -25px rgba(18,24,33,.35)}
+.sb{opacity:0}
+.active .sb{animation:popin .45s var(--d,0s) cubic-bezier(.2,.7,.3,1) both}
+.active .scene{animation:rise 1.2s .3s cubic-bezier(.2,.75,.25,1) both}
+.active .bus{animation:busin 1.6s 1.1s cubic-bezier(.2,.75,.25,1) both}
+@keyframes busin{from{transform:translateX(260px);opacity:0}to{transform:none;opacity:1}}
+.active .flag{animation:wave 2.4s ease-in-out infinite;transform-origin:232px 19px}
+@keyframes wave{50%{transform:scaleX(.82)}}
+@media (prefers-reduced-motion: reduce){.sb{opacity:1}.active .sb,.active .scene,.active .bus,.active .flag{animation:none}}
+html:not(.js) .sb{opacity:1}
+
+/* ---------- stack slide: architecture | tech list ---------- */
+#stk .tk{display:grid;grid-template-columns:1010px 1fr;gap:44px;margin-top:30px;align-items:start}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px 14px}
+.arch svg{width:100%;height:auto;display:block}
+.arch svg text{font-family:"IBM Plex Sans",system-ui,sans-serif}
+.arch .leg{display:flex;gap:18px;flex-wrap:wrap;font-size:16px;color:var(--muted);margin-top:6px}
+.arch .leg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.tlist{display:grid;gap:0}
+.tlist .tr2{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px 0;border-top:1px solid var(--line);align-items:start}
+.tlist .tr2:last-child{border-bottom:1px solid var(--line)}
+.tlist .tr2 b{font-family:var(--mono);font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);font-weight:500;padding-top:6px}
+.tlist .cs{display:flex;flex-wrap:wrap;gap:8px}
+.tlist .cs span{font-size:18px;padding:5px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--ink);white-space:nowrap}
+.tlist .cs span.k{background:var(--ink);border-color:var(--ink);color:#fff}
+#stk .tracks{position:static;margin-top:20px}
+#stk .tracks .chips span{flex:none}
+.tracks .chips span.main{flex-direction:row;align-items:baseline;min-width:0}.tracks .chips span b,.tracks .chips span em{display:inline}#stk .tracks .chips{gap:8px}
+
+/* ---------- team names + track panel ---------- */
+.cv-meta.team3{font-size:22px;line-height:1.45}
+.trkrow{flex-wrap:nowrap;gap:8px}
+.trkrow button{all:unset;cursor:pointer;box-sizing:border-box;display:inline-flex;align-items:baseline;gap:8px;padding:9px 15px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:17px;white-space:nowrap;color:var(--ink);flex:none;transition:border-color .2s,background .2s}
+.trkrow button:hover{border-color:var(--forest)}
+.trkrow button b{font-family:var(--display);font-weight:600}
+.trkrow button em{font-style:normal;color:var(--muted);font-size:15px}
+.trkrow button.main{background:var(--ink);border-color:var(--ink);color:#fff}.trkrow button.main em{color:#a9b3c0}
+.trkrow .trkall{background:var(--lime-soft);border-color:#bfe6cf;color:var(--forest);font-family:var(--mono);font-size:15px;align-items:center}
+.trkpanel{position:absolute;inset:70px 90px 80px;background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:0 60px 120px -40px rgba(18,24,33,.5);padding:30px 36px;z-index:5;opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .3s,transform .3s,visibility .3s}
+.trkpanel.open{opacity:1;visibility:visible;transform:none}
+.tp-head{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+.tp-head h3{font-size:30px;max-width:1400px}
+.tp-x{all:unset;cursor:pointer;width:48px;height:48px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:30px;flex:none}
+.tp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.tpc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s,opacity .25s}
+.tpc small{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest)}
+.tpc h4{font-family:var(--display);font-size:23px;margin:6px 0 10px;line-height:1.15}
+.tpc dl{display:grid;gap:4px;font-size:16px;line-height:1.4;color:var(--ink-soft)}
+.tpc dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.tpc dd{margin:0}
+.tp-prize{margin-top:auto;padding-top:12px;font-family:var(--mono);font-size:14px;color:var(--ink)}
+.tp-prize::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--lime);margin-right:8px;vertical-align:1px}
+.tp-rule{background:var(--night);border-color:var(--night)}.tp-rule h4{color:#fff}.tp-rule small{color:var(--lime)}.tp-rule dl{color:#c9cfd8}.tp-rule dt{color:#8a93a3}
+.tp-grid.focus .tpc{opacity:.45}
+.tp-grid.focus .tpc.hl{opacity:1;border-color:var(--forest);box-shadow:0 0 0 3px var(--lime-soft)}
+
+/* ---------- Newark framing ---------- */
+.cv-nwk{display:block;margin-top:12px;font-family:var(--mono);font-size:15px;line-height:1.4;color:var(--forest);background:var(--lime-soft);padding:8px 12px;border-radius:12px;max-width:290px}
+.prob.nwk{border-color:#bfe6cf;background:linear-gradient(0deg,#fff,#f3fbf6)}
+.prob.nwk p{font-size:18px;line-height:1.4}
+
+/* detector cards are static: everything visible, no clicking */
+.det .sees{max-height:none !important;font-size:19px}
+.det .vd{opacity:1 !important;transform:none !important}
+.det .lb{grid-column:1}
+.det.win{background:var(--lime-soft)}
+.det:hover{border-color:var(--line)}.det.win:hover{border-color:var(--forest)}
+.dets{gap:12px !important}
+
+/* ================= slide 4 v2: network + verdicts + results ================= */
+#how .viz{--r-ill:#eb6834;--r-bus:#2a78d6;--r-care:#1baf7a;--r-oth:#8a909a}
+#how .hw2{--r-ill:#eb6834;--r-bus:#2a78d6;--r-care:#1baf7a;--r-oth:#8a909a;display:grid;grid-template-columns:800px 1fr;gap:34px;margin-top:24px;align-items:start}
+.net{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 24px 16px}
+.net-h{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.net-h b{font-family:var(--display);font-size:24px;display:block}
+.net-h span{font-size:16px;color:var(--muted);display:block;margin-top:4px;max-width:380px;line-height:1.35}
+.lyr{display:flex;gap:4px;background:#f2f2ef;border-radius:12px;padding:4px;flex:none}
+.lyr button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:9px;font-size:15px;color:var(--muted)}
+.lyr button.on{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(18,24,33,.12)}
+.ln{display:inline-block;width:20px;height:0;border-top:2px solid currentColor}
+.ln.dash{border-top-style:dashed}.ln.thick{border-top-width:5px;border-radius:3px}
+#netSvg{width:100%;height:auto;display:block;margin-top:6px}
+#netSvg text{font-family:"IBM Plex Sans",system-ui,sans-serif}
+#netSvg .e{stroke:#b9bbb4;stroke-width:1.6;transition:opacity .35s}
+#netSvg .e.bus{stroke:var(--r-bus);stroke-dasharray:6 6;stroke-width:2.2}
+#netSvg .e.home{stroke:var(--ink);stroke-width:5;stroke-linecap:round}
+#netSvg .off{opacity:0}
+#netSvg .rl{font-size:14px;fill:var(--muted)}
+#netSvg .cl{font-size:15px;font-weight:600;fill:var(--ink)}
+#netSvg .n{transition:transform .2s}
+#netSvg .n:hover{transform:scale(1.18)}
+#netSvg .hull{transition:opacity .35s}
+.net-leg{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:4px;font-size:15px;color:var(--ink-soft)}
+.net-leg span{display:inline-flex;align-items:center;gap:7px}
+.net-leg b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+.net-leg .dot{width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;color:#fff;font-size:11px;font-weight:700}
+.net-leg .await{width:18px;height:18px;border-radius:50%;border:2px dashed var(--muted);background:#fff}
+.net-leg .pres{width:9px;height:9px;border-radius:50%;background:#d3d2cb}
+#how .lim{margin-top:8px;font-size:15px}
+.rcol{display:grid;gap:14px}
+.dtab{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px 22px 8px}
+.dt-h{font-size:18px;color:var(--ink-soft);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.dt-h small{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--forest);margin-right:10px}
+.dt-h b{color:var(--ink)}
+.dt-r{display:grid;grid-template-columns:150px 1fr auto;gap:14px;align-items:center;padding:9px 0;border-bottom:1px solid #eeede8;font-size:17px}
+.dt-r:last-child{border-bottom:0}
+.dt-r b{font-family:var(--display);font-weight:600;font-size:17px}
+.dt-r span{color:var(--ink-soft);line-height:1.3}
+.dt-r i{font-style:normal}
+.dt-r.win{background:var(--lime-soft);margin:0 -22px;padding:9px 22px;border-radius:0 0 18px 18px}
+#how .res{padding:16px 24px}
+#how .res .rh b{font-size:22px}
+#how .hb{padding:4px 0;font-size:17px;grid-template-columns:160px 1fr 60px}
+#how .hb .tr{height:20px}
+#how .res .cap{font-size:15px;min-height:0;margin-top:6px}
+#how .luck{margin-top:0;padding:14px 24px;grid-template-columns:1fr 300px}
+#how .luck h3{font-size:21px}
+#how .luck p{font-size:16px}
+#how .hist{height:78px}
 </style>
 </head>
 <body>
@@ -577,68 +769,75 @@
 <!-- 1. Cover -->
 <section class="slide cover">
   <nav class="cv-nav">
-    <span class="cv-logo"><span class="cv-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3.2 3.2"/><circle cx="12" cy="12" r="2.2"/></svg></span>Why Absent</span>
+    <span class="cv-logo"><span class="cv-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" stroke-dasharray="3.2 3.2"/><circle cx="12" cy="12" r="2.2"/></svg></span>Roll Call</span>
     <span class="cv-pill">Problem</span>
     <span class="cv-pill on">Solution</span>
     <span class="cv-pill">Demo</span>
   </nav>
   <div class="cv-url"><i></i>whereareallthekidsandhowmuchisthiscostingus.us</div>
-  <h1 class="cv-title"><span>WHY ABSENT</span></h1>
-  <p class="cv-meta left"><small>Presented at</small>HackPrinceton Fall 2026<br>Education track</p>
-  <p class="cv-meta right"><small>Presented by</small>Mayukha Ajeesh<br>and team</p>
+  <h1 class="cv-title"><span>ROLL CALL</span></h1>
+  <p class="cv-meta left"><small>Presented at</small>HackPrinceton Fall 2026<br>Education track<span class="cv-nwk">Built at NJIT for Newark's public schools</span></p>
+  <p class="cv-meta right team3"><small>Team</small>Mayukha Ajeesh Ramsha Nath<br>Carlin Verano<br>Bavan Divaaniaazar</p>
 
-  <div class="laptop">
-    <div class="lt-screen">
-      <div class="lt-cam"></div>
-      <div class="lt-app">
-        <div class="app-top"><span class="dots"><i></i><i></i><i></i></span><span class="search">Search Lincoln Unified</span></div>
-        <div class="app-body">
-          <div class="rail"><span class="ws">W</span><span class="ri on">▤</span><span class="ri">◎</span><span class="ri">$</span></div>
-          <div class="side">
-            <div class="side-h">Lincoln Unified</div>
-            <div class="side-l">Why Absent</div>
-            <div class="ch on">Case queue</div>
-            <div class="ch">Clusters</div>
-            <div class="ch">Action plans</div>
-            <div class="ch">Catch-up plans</div>
-            <div class="ch">Revenue</div>
-            <div class="side-l">Safety</div>
-            <div class="ch">Escalations</div>
-          </div>
-          <div class="main">
-            <div class="main-h"><b>Case queue</b><span>Mateo R. · Grade 4 · Route 7</span></div>
-            <div class="lt-chat">
-              <div class="lt-fam">El autobús de la ruta 7 no pasó otra vez hoy.</div>
-              <div class="lt-ribbon"><b>Spanish</b> <span>reply received 8 seconds ago</span></div>
-              <div class="lt-answer">
-                <p>Reason captured. The bus did not come.</p>
-                <div class="lt-src">
-                  <span class="chip ok">Barrier <i>✓ transportation</i></span>
-                  <span class="chip">95% confidence</span>
-                  <span class="chip">“no pasó otra vez hoy”</span>
-                </div>
-              </div>
-              <div class="lt-ok"><span><b>Route 7 cluster.</b> 9 students, same 3 days. $1,755 at risk this week.</span><span class="go">Draft plan</span></div>
-            </div>
-          </div>
+  <div class="scene">
+    <div class="sc-phone">
+      <div class="phone"><div class="ph-screen"><div class="ph-notch"></div>
+        <div class="ph-head"><div class="ph-av">L</div><b>Lincoln Elementary</b>iMessage · Mateo's mom</div>
+        <div class="ph-msgs">
+          <div class="bub in sb" style="--d:.9s">Hi, this is Lincoln Elementary. We missed Mateo today. Is anything getting in the way? A person reads every reply.</div>
+          <div class="bub out sb" style="--d:1.7s">El autobús de la ruta 7 no pasó otra vez hoy.</div>
+          <div class="ph-meta sb" style="--d:1.9s">Delivered</div>
+          <div class="bub in sb" style="--d:3.1s">Gracias. Lo sentimos, fue nuestra culpa. Mañana habrá un recorrido de respaldo.</div>
         </div>
-      </div>
+        <div class="ph-input">iMessage</div>
+      </div></div>
     </div>
-    <div class="lt-base"><span></span></div>
+    <div class="sc-link">
+      <svg viewBox="0 0 220 120" aria-hidden="true"><path id="scArc" d="M8 96 C 70 8, 150 8, 212 96" fill="none" stroke="#8fa89a" stroke-width="3" stroke-dasharray="8 8"/><circle r="8" fill="#3ddc84"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#scArc"/></animateMotion></circle></svg>
+      <span class="sc-tag sb" style="--d:2.2s">reply → reason in 8 s</span>
+    </div>
+    <div class="sc-school">
+      <svg viewBox="0 0 460 400" aria-label="Lincoln Elementary school with a Route 7 bus">
+        <line x1="0" y1="352" x2="460" y2="352" stroke="#dcdbd4" stroke-width="3"/>
+        <line x1="230" y1="58" x2="230" y2="8" stroke="#121821" stroke-width="3"/>
+        <path class="flag" d="M232 10 h40 l-8 9 l8 9 h-40 z" fill="#13834c"/>
+        <rect x="70" y="128" width="320" height="224" fill="#ffffff" stroke="#121821" stroke-width="3"/>
+        <polygon points="50,132 230,52 410,132" fill="#e9e8e2" stroke="#121821" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="230" cy="102" r="17" fill="#fff" stroke="#121821" stroke-width="3"/>
+        <path d="M230 92 v10 l7 5" stroke="#121821" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <rect x="120" y="146" width="220" height="30" rx="4" fill="#121821"/>
+        <text x="230" y="167" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="2" fill="#fff">LINCOLN ELEMENTARY</text>
+        <g fill="#e1f5e9" stroke="#121821" stroke-width="2">
+          <rect x="96" y="196" width="40" height="40"/><rect x="152" y="196" width="40" height="40"/><rect x="268" y="196" width="40" height="40"/><rect x="324" y="196" width="40" height="40"/>
+          <rect x="96" y="262" width="40" height="40"/><rect x="152" y="262" width="40" height="40"/>
+        </g>
+        <rect x="204" y="270" width="52" height="82" fill="#13834c" stroke="#121821" stroke-width="3"/>
+        <circle cx="246" cy="314" r="3" fill="#fff"/>
+        <g class="bus">
+          <rect x="250" y="272" width="196" height="70" rx="12" fill="#f2b632" stroke="#121821" stroke-width="3"/>
+          <rect x="250" y="272" width="196" height="12" rx="6" fill="#e3a21f"/>
+          <g fill="#fff" stroke="#121821" stroke-width="2"><rect x="264" y="290" width="30" height="22" rx="3"/><rect x="302" y="290" width="30" height="22" rx="3"/><rect x="340" y="290" width="30" height="22" rx="3"/><rect x="398" y="290" width="36" height="34" rx="3"/></g>
+          <text x="317" y="334" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#121821">ROUTE 7</text>
+          <circle cx="282" cy="346" r="13" fill="#121821"/><circle cx="410" cy="346" r="13" fill="#121821"/>
+          <circle cx="282" cy="346" r="5" fill="#dcdbd4"/><circle cx="410" cy="346" r="5" fill="#dcdbd4"/>
+        </g>
+      </svg>
+      <div class="lt-ok sb" style="--d:2.6s"><span><b>Reason captured: transportation.</b> Route 7 cluster, 9 riders, same 3 days.</span></div>
+    </div>
   </div>
 </section>
 
 <!-- 2. Problem -->
 <section class="slide">
-  <div class="kicker">The problem</div>
-  <h2 style="font-size:64px">A normal Monday in the attendance office.</h2>
+  <div class="kicker">The problem · Newark, NJ</div>
+  <h2 style="font-size:64px">Monday in a Newark attendance office.</h2>
   <div class="chatwrap">
     <div class="app">
       <div class="app-top"><span class="dots"><i></i><i></i><i></i></span><span class="search">Attendance export, Mon Nov 10</span></div>
       <div class="app-body">
         <div class="rail"><span class="ws">S</span><span class="ri on">▤</span><span class="ri">✉</span><span class="ri">$</span></div>
         <div class="side">
-          <div class="side-h">Lincoln Unified</div>
+          <div class="side-h">Lincoln Elementary</div>
           <div class="side-l">Student system</div>
           <div class="ch on">Attendance</div>
           <div class="ch">Rosters</div>
@@ -650,14 +849,14 @@
           <div class="main-h"><b>Attendance</b><span>Absent today: 5</span></div>
           <div class="sis">
             <table>
-              <tr><th>Student</th><th>Grade</th><th>Status</th><th>Reason</th></tr>
-              <tr><td>Mateo R.</td><td>4</td><td><span class="badge lock">Excused</span></td><td class="nr">not recorded</td></tr>
-              <tr><td>Nia T.</td><td>4</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
-              <tr><td>Dev K.</td><td>5</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
-              <tr><td>Lily W.</td><td>4</td><td><span class="badge lock">Excused</span></td><td class="nr">not recorded</td></tr>
-              <tr><td>Ana C.</td><td>3</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
+              <tr><th>Student</th><th>Grade</th><th>Bus</th><th>Status</th><th>Reason</th></tr>
+              <tr><td>Mateo R.</td><td>4</td><td>Route 7</td><td><span class="badge lock">Excused</span></td><td class="nr">not recorded</td></tr>
+              <tr><td>Nia T.</td><td>4</td><td>Route 7</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
+              <tr><td>Dev K.</td><td>5</td><td>Route 7</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
+              <tr><td>Lily W.</td><td>4</td><td>walks</td><td><span class="badge lock">Excused</span></td><td class="nr">not recorded</td></tr>
+              <tr><td>Ana C.</td><td>3</td><td>walks</td><td><span class="badge lock">Unexcused</span></td><td class="nr">not recorded</td></tr>
             </table>
-            <div class="alert"><b>5 absences, 0 reasons.</b> Next step: the same form letter to every family.</div>
+            <div class="alert"><b>5 absences, 0 reasons.</b> Three ride Route 7. A bus problem, the flu, or coincidence? The export can't say, so every family gets the same form letter.</div>
           </div>
         </div>
       </div>
@@ -665,10 +864,10 @@
     <div class="probs">
       <div class="prob"><div class="pn red">19%</div><h3>Nobody knows why</h3><p>Chronically absent in California, about 1.1 million students (2024/25).</p></div>
       <div class="prob"><div class="pn g">$630 to $1,800</div><h3>Funding walks out</h3><p>Lost per chronically absent student each year. Vendor estimate, unverified.</p></div>
-      <div class="prob"><div class="pn">0 plans</div><h3>Learning falls behind</h3><p>Make-up work is generic and ignores the cause.</p></div>
+      <div class="prob nwk"><div class="pn g">Why Newark</div><h3>Built for our neighbors</h3><p>We study at NJIT in Newark. Many of the city's schools serve low-income families, where an absence is often a bus or a sick sibling. Roll Call is for them.</p></div>
     </div>
   </div>
-  <div class="chrome"><span>WHY ABSENT</span><span>02 · PROBLEM</span></div>
+  <div class="chrome"><span>ROLL CALL</span><span>02 · PROBLEM</span></div>
 </section>
 
 <!-- 3. Demo -->
@@ -686,7 +885,7 @@
   <div class="dbody">
     <div>
       <div class="phone"><div class="ph-screen"><div class="ph-notch"></div>
-        <div class="ph-head"><div class="ph-av">L</div><b>Lincoln Unified</b>iMessage</div>
+        <div class="ph-head"><div class="ph-av">L</div><b>Lincoln Elementary</b>iMessage</div>
         <div class="ph-msgs" id="phMsgs"></div>
         <div class="ph-input">iMessage</div>
       </div></div>
@@ -694,12 +893,12 @@
       <div class="sim" id="sim"></div>
     </div>
     <div class="app dapp">
-      <div class="app-top"><span class="dots"><i></i><i></i><i></i></span><span class="search">Search Lincoln Unified</span></div>
+      <div class="app-top"><span class="dots"><i></i><i></i><i></i></span><span class="search">Search Lincoln Elementary</span></div>
       <div class="app-body">
         <div class="rail"><span class="ws">W</span><span class="ri on">▤</span><span class="ri">◎</span><span class="ri">$</span></div>
         <div class="side">
-          <div class="side-h">Lincoln Unified</div>
-          <div class="side-l">Why Absent</div>
+          <div class="side-h">Lincoln Elementary</div>
+          <div class="side-l">Roll Call</div>
           <div class="ch on" data-v="case">Case queue</div>
           <div class="ch" data-v="clusters">Clusters</div>
           <div class="ch" data-v="plans">Action plans</div>
@@ -713,66 +912,165 @@
       </div>
     </div>
   </div>
-  <div class="chrome"><span>WHY ABSENT · DEMO</span><span>03 · LIVE DEMO</span></div>
+  <div class="chrome"><span>ROLL CALL · DEMO</span><span>03 · LIVE DEMO</span></div>
 </section>
 
-<!-- 4. Education -->
-<section class="slide">
-  <div class="kicker">Education track</div>
-  <h2 style="font-size:68px;max-width:1640px">Missed days should not mean <em>missed learning.</em></h2>
-  <div class="e4">
-    <ul class="loopsteps">
-      <li><span>1</span><div><h3>Personalized</h3><p>Catch-up built from the pacing guide, sized to the days missed, lighter after illness.</p></div></li>
-      <li><span>2</span><div><h3>Accessible</h3><p>Families reply in their own language. English and Spanish today.</p></div></li>
-      <li><span>3</span><div><h3>Interactive</h3><p>Check-in, reply, approved plan, student check-offs. A real two-way loop.</p></div></li>
-    </ul>
-    <div class="outs">
-      <div class="doc">
-        <div class="dhd"><div><small class="k">Catch-up plan</small><b>Lily W.</b> <span style="color:var(--muted)">Grade 4</span></div><span class="badge ok">Illness: lighter load</span></div>
-        <div class="dm">Out Nov 10 to 12 · 20 minutes a day · Teacher check-in Fri Nov 13</div>
-        <div class="dr"><span class="n">1</span><div><b>Equivalent fractions</b><small>Math · missed Nov 10</small></div><span class="min">20 min</span></div>
-        <div class="dr"><span class="n">2</span><div><b>Main idea and key details</b><small>Reading · missed Nov 11</small></div><span class="min">20 min</span></div>
-        <div class="dr"><span class="n">3</span><div><b>Comparing fractions</b><small>Math · missed Nov 12</small></div><span class="min">20 min</span></div>
-        <div class="df"><span class="chip ok">Every topic is in the Grade 4 pacing guide <i>✓</i></span></div>
+<!-- 4. How it finds the cause -->
+<section class="slide" id="how">
+  <div class="kicker">AI and graph · held-out test</div>
+  <h2>A cluster is not a cause. <em>Find the group, then ask why.</em></h2>
+  <div class="hw2">
+    <div class="net noadv">
+      <div class="net-h"><div><b>This week's school network</b><span>Each dot is a student. Lines join students who share a link. Letter = reason they're out.</span></div>
+        <div class="lyr" id="lyr"><button class="on" data-l="room"><i class="ln solid"></i>Classroom</button><button class="on" data-l="bus"><i class="ln dash"></i>Bus route</button><button class="on" data-l="home"><i class="ln thick"></i>Household</button></div>
       </div>
-      <div class="sms"><small>Text to the family</small>
-        <div class="bub in">Hello. Several students in Room 104 have been out sick. Our nurse is checking in, and we will send a lighter catch-up plan when your child returns.</div>
-        <div class="bub out" style="margin-top:8px">Thank you. She is feeling better.</div>
+      <svg id="netSvg" viewBox="0 0 760 520" role="img" aria-label="School network with a Room 104 illness cluster and a Route 7 transportation cluster"></svg>
+      <div class="net-leg" id="netLeg"></div>
+      <p class="lim"><b>Honest limits.</b> The detector was tested on a real contact network with simulated events. Illness outbreaks stay hard for every detector (15 to 20%).</p>
+    </div>
+    <div class="rcol noadv">
+      <div class="dtab">
+        <div class="dt-h"><small>Test case</small>A fever spreads among <b>Route 7 riders</b>. 6 are out, 2 families replied “fever.”</div>
+        <div class="dt-r"><b>Replies only</b><span>2 “fever” replies in a school of 232. Looks normal.</span><i class="badge bad">Missed</i></div>
+        <div class="dt-r"><b>Network only</b><span>6 riders out, a real hotspot. Guesses “bus failure.”</span><i class="badge bad">Wrong cause</i></div>
+        <div class="dt-r"><b>Combined</b><span>Only 2 labeled absences, so it waits for replies.</span><i class="badge pend">Too late</i></div>
+        <div class="dt-r win"><b>Two-stage · ours</b><span>Hotspot first, then replies say fever: call the nurse.</span><i class="badge ok">Right cause</i></div>
+      </div>
+      <div class="res">
+        <div class="rh"><b>Right cause, found in time</b>
+          <div class="seg" id="resSeg"><button class="on" data-m="all">100 events</button><button data-m="mixed">Mixed-up cases</button><button data-m="records">No sensors</button></div>
+        </div>
+        <div id="bars"></div>
+        <div class="cap" id="resCap"></div>
+      </div>
+      <div class="luck">
+        <div><h3>The luck test</h3><p>Route 7: <b>9</b> out in 3 days vs <b>2.1</b> expected. We shuffled the absence dates 199 times.</p><div class="out" id="luckOut"></div></div>
+        <div class="hist" id="hist"></div>
       </div>
     </div>
   </div>
-  <div class="tracks">
-    <div class="tl">Also entered</div>
-    <div class="chips">
-      <span class="main"><b>Education</b><em>main track</em></span>
-      <span><b>Peri</b><em>one persona, dollar ROI</em></span>
-      <span><b>Photon</b><em>two-way iMessage</em></span>
-      <span><b>Arlequin T2</b><em>text plus contact network</em></span>
-      <span><b>Amazon</b><em>agentic, human approves</em></span>
-    </div>
-    <div class="ad">Add-ons: ChatOverflow leaderboard · GoDaddy domain · DEV write-up</div>
-  </div>
-  <div class="chrome"><span>WHY ABSENT</span><span>04 · EDUCATION</span></div>
+  <div class="chrome"><span>ROLL CALL</span><span>04 · HOW IT FINDS THE CAUSE</span></div>
 </section>
 
 <!-- 5. Stack -->
 <section class="slide" id="stk">
   <div class="kicker">Architecture and tech stack</div>
-  <h2>One API, swappable intelligence, safety first.</h2>
-  <div class="stack">
-    <div class="layer"><div class="label">Frontend</div><h3>Staff dashboard</h3><ul><li>React 18, TypeScript, Vite</li><li>Clerk, counselor and manager views</li></ul></div>
-    <div class="layer"><div class="label">Backend</div><h3>FastAPI core</h3><ul><li>Python, Pydantic v2</li><li>SIS CSV import, audit trail</li><li>TigerData time series <em>planned</em></li></ul></div>
-    <div class="layer"><div class="label">AI and graph</div><h3>Reasons to clusters</h3><ul><li>Gemini classifier <em>stub today</em></li><li>networkx, SocioPatterns contact graph</li><li>Whisper voice notes <em>planned</em></li></ul></div>
-    <div class="layer"><div class="label">Messaging and trust</div><h3>Photon 2.0</h3><ul><li>Two-way iMessage with families</li><li>No links, STOP honored</li><li>Synthetic data only</li></ul></div>
+  <h2>One API, live intelligence, safety first.</h2>
+  <div class="tk">
+    <div class="arch">
+      <svg viewBox="0 0 1000 560" role="img" aria-label="Roll Call architecture">
+  <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6c7480"/></marker></defs>
+  <g font-size="17" fill="#121821">
+    <!-- people -->
+    <rect x="0" y="40" width="150" height="86" rx="14" fill="#f4f3ef" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="75" y="76" text-anchor="middle" font-weight="600" font-size="19">Families</text><text x="75" y="102" text-anchor="middle" fill="#6c7480" font-size="15">any language</text>
+    <rect x="0" y="420" width="150" height="86" rx="14" fill="#f4f3ef" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="75" y="456" text-anchor="middle" font-weight="600" font-size="19">Staff</text><text x="75" y="482" text-anchor="middle" fill="#6c7480" font-size="15">clerk · counselor</text>
+    <!-- edge services -->
+    <rect x="200" y="40" width="190" height="86" rx="14" fill="#fff" stroke="#3b6ea8" stroke-width="2.5"/>
+    <text x="295" y="76" text-anchor="middle" font-weight="600" font-size="19">Photon 2.0</text><text x="295" y="102" text-anchor="middle" fill="#6c7480" font-size="15">two-way iMessage</text>
+    <rect x="200" y="420" width="190" height="86" rx="14" fill="#fff" stroke="#3b6ea8" stroke-width="2.5"/>
+    <text x="295" y="456" text-anchor="middle" font-weight="600" font-size="19">React dashboard</text><text x="295" y="482" text-anchor="middle" fill="#6c7480" font-size="15">via Caddy · HTTPS</text>
+    <!-- API container -->
+    <rect x="440" y="10" width="330" height="540" rx="18" fill="#e1f5e9" stroke="#13834c" stroke-width="2.5"/>
+    <text x="462" y="42" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="2" fill="#13834c">FASTAPI CORE</text>
+    <g font-size="17">
+      <rect x="462" y="60" width="286" height="74" rx="12" fill="#fff" stroke="#c0352d" stroke-width="2.5"/>
+      <text x="480" y="90" font-weight="600">1 · Safety gate</text><text x="480" y="115" fill="#6c7480" font-size="15">keywords first, fails closed</text>
+      <rect x="462" y="156" width="286" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+      <text x="480" y="186" font-weight="600">2 · Reason classifier</text><text x="480" y="211" fill="#6c7480" font-size="15">JSON label + exact evidence quote</text>
+      <rect x="462" y="252" width="286" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+      <text x="480" y="282" font-weight="600">3 · Two-stage detector</text><text x="480" y="307" fill="#6c7480" font-size="15">permutation scan, then replies</text>
+      <rect x="462" y="348" width="286" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+      <text x="480" y="378" font-weight="600">4 · Plans + catch-up</text><text x="480" y="403" fill="#6c7480" font-size="15">drafted, a human approves</text>
+      <rect x="462" y="444" width="286" height="84" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+      <text x="480" y="474" font-weight="600">Escalations · revenue</text><text x="480" y="499" fill="#6c7480" font-size="15">on-call paging, $ in aggregate</text>
+    </g>
+    <!-- stores and models -->
+    <rect x="820" y="156" width="180" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="910" y="186" text-anchor="middle" font-weight="600">Gemini API</text><text x="910" y="211" text-anchor="middle" fill="#6c7480" font-size="15">keyword fallback</text>
+    <rect x="820" y="252" width="180" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="910" y="282" text-anchor="middle" font-weight="600">School network</text><text x="910" y="307" text-anchor="middle" fill="#6c7480" font-size="15">rosters, bus routes</text>
+    <rect x="820" y="348" width="180" height="74" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="910" y="378" text-anchor="middle" font-weight="600">TigerData</text><text x="910" y="403" text-anchor="middle" fill="#6c7480" font-size="15">absences + audit log</text>
+    <rect x="820" y="444" width="180" height="84" rx="12" fill="#fff" stroke="#dcdbd4" stroke-width="2"/>
+    <text x="910" y="474" text-anchor="middle" font-weight="600">District SIS</text><text x="910" y="499" text-anchor="middle" fill="#6c7480" font-size="15">nightly export</text>
+  </g>
+  <!-- arrows -->
+  <g stroke="#6c7480" stroke-width="2.5" fill="none" marker-end="url(#ah)">
+    <path d="M150 83 H196"/><path d="M200 99 H154" />
+    <path d="M390 83 H458"/>
+    <path d="M605 134 V152"/><path d="M605 230 V248"/><path d="M605 326 V344"/>
+    <path d="M748 193 H816"/><path d="M748 289 H816"/><path d="M748 385 H816"/>
+    <path d="M816 486 H752"/><path d="M910 444 V426"/>
+    <path d="M440 463 H394"/><path d="M200 463 H154"/>
+    <path d="M150 479 H196"/><path d="M390 479 H436"/>
+  </g>
+  <path d="M462 97 C 420 97, 420 270, 440 300" stroke="#c0352d" stroke-width="2.5" stroke-dasharray="6 6" fill="none"/>
+  <text x="300" y="250" text-anchor="middle" font-size="15" fill="#c0352d">safety flag → counselor,</text>
+  <text x="300" y="270" text-anchor="middle" font-size="15" fill="#c0352d">household paused</text>
+</svg>
+      <div class="leg"><span><i style="background:#c0352d"></i>runs before any model</span><span><i style="background:#13834c"></i>one FastAPI service</span><span><i style="background:#3b6ea8"></i>channels people use</span></div>
+    </div>
+    <div class="tlist">
+      <div class="tr2"><b>Frontend</b><div class="cs"><span class="k">React 18</span><span>TypeScript</span><span>Vite</span></div></div>
+      <div class="tr2"><b>Backend</b><div class="cs"><span class="k">FastAPI</span><span>Python</span><span>Pydantic v2</span></div></div>
+      <div class="tr2"><b>AI</b><div class="cs"><span class="k">Gemini</span><span>keyword fallback</span><span>Deep Agents assistant</span><span>Recall@5 0.96</span></div></div>
+      <div class="tr2"><b>Graph</b><div class="cs"><span class="k">networkx</span><span>permutation scan</span><span>routes + rosters</span><span>50k students, 3 s</span></div></div>
+      <div class="tr2"><b>Data</b><div class="cs"><span class="k">TigerData</span><span>Postgres</span><span>hypertable</span><span>continuous aggregate</span></div></div>
+      <div class="tr2"><b>Messaging</b><div class="cs"><span class="k">Photon 2.0</span><span>iMessage</span><span>STOP + opt-outs</span></div></div>
+      <div class="tr2"><b>Infra</b><div class="cs"><span class="k">Docker</span><span>Caddy HTTPS</span><span>Vultr</span><span>Cloudflare DNS</span></div></div>
+    </div>
   </div>
-  <div class="why">
-    <div><h4>Stubs behind stable interfaces</h4><p>Swap Gemini in without touching the API or the UI.</p></div>
-    <div><h4>A real contact graph</h4><p>The network is real public data. Only the reasons are synthetic.</p></div>
-    <div><h4>Safety runs first</h4><p>The safety check comes before any classification and always wins.</p></div>
+  <div class="tracks noadv">
+    <div class="chips trkrow">
+      <button class="trkall" data-t="all">Tracks we entered ▸</button>
+      <button class="trkc main" data-t="edu"><b>Education</b><em>main</em></button>
+      <button class="trkc" data-t="amazon"><b>Amazon</b><em>practical AI</em></button>
+      <button class="trkc" data-t="arlequin"><b>Arlequin T2</b><em>content + network</em></button>
+      <button class="trkc" data-t="photon"><b>Photon</b><em>iMessage agent</em></button>
+      <button class="trkc" data-t="peri"><b>Peri</b><em>forward deployed</em></button>
+      <button class="trkc" data-t="langchain"><b>LangChain</b><em>deepagents</em></button>
+      <button class="trkc" data-t="chatoverflow"><b>ChatOverflow</b><em>leaderboard</em></button>
+    </div>
   </div>
-  <div class="boundary"><b>Human in the loop.</b> A clerk approves every plan. Counselors own every safety case.</div>
-  <div class="endu">whereareallthekidsandhowmuchisthiscostingus.us</div>
-  <div class="chrome"><span>WHY ABSENT · HACKPRINCETON FALL 2026</span><span>05 · TECH STACK</span></div>
+  <div class="trkpanel noadv" id="trkPanel" aria-hidden="true">
+    <div class="tp-head"><div><div class="kicker" style="margin-bottom:6px">Tracks we entered · from the HackPrinceton F26 hacker packet</div><h3>One project, seven tracks. Here is what each one asks for, and where Roll Call answers it.</h3></div><button class="tp-x" id="trkClose" aria-label="Close">×</button></div>
+    <div class="tp-grid">
+      <article class="tpc" data-t="edu"><small>HackPrinceton · main track</small><h4>Best Education Hack</h4>
+        <dl><dt>They ask</dt><dd>Make learning more interactive, accessible or personalized. Judged on creativity, utility, charity and avidity.</dd>
+        <dt>Roll Call</dt><dd>For Newark's under-resourced schools: catch-up plans from the pacing guide, sized to the days missed and lighter after illness. Families answer in their own language.</dd></dl>
+        <div class="tp-prize">Required main track · one of six</div></article>
+      <article class="tpc" data-t="amazon"><small>Amazon</small><h4>Best Practical AI Innovation</h4>
+        <dl><dt>They ask</dt><dd>AI that reasons, plans, acts and adapts for real users. 25% each: creativity, usefulness, technical build, UX.</dd>
+        <dt>Roll Call</dt><dd>Reasons about the root cause, drafts plans, sends them after a clerk approves, and learns from clerk label corrections.</dd></dl>
+        <div class="tp-prize">$125 / $75 / $50 per person, Amazon gift cards</div></article>
+      <article class="tpc" data-t="arlequin"><small>Arlequin AI · Track 2</small><h4>Content + Connectivity</h4>
+        <dl><dt>They ask</dt><dd>Combine what messages say with how actors connect. Both layers must matter; recall@k is a plus. Public data only.</dd>
+        <dt>Roll Call</dt><dd>Family replies plus a real contact network and school records. Two-stage: 53% right cause vs 42% network-only and 19% replies-only. Recall@5 0.96.</dd></dl>
+        <div class="tp-prize">Prizes announced by Arlequin</div></article>
+      <article class="tpc" data-t="photon"><small>Photon</small><h4>Messaging Agent on Photon 2.0</h4>
+        <dl><dt>They ask</dt><dd>Build a messaging agent on the Photon 2.0 beta.</dd>
+        <dt>Roll Call</dt><dd>Two-way iMessage with families: supportive check-ins, live reason capture, approved plans sent back, STOP and plain-language opt-outs, safety pause.</dd></dl>
+        <div class="tp-prize">$400 + $300 credits + interview fast-track · runner-up $200 + $100</div></article>
+      <article class="tpc" data-t="peri"><small>Peri</small><h4>Forward Deployed Challenge</h4>
+        <dl><dt>They ask</dt><dd>Solve a real problem for a real organization you consulted. Judged on real-world need, usability and execution.</dd>
+        <dt>Roll Call</dt><dd>Built around one Newark attendance clerk's daily workflow: the attendance export the school already has goes in, a reason and a fix come out, ready to switch on Monday.</dd></dl>
+        <div class="tp-prize">Intros to hiring teams at Peri partner companies</div></article>
+      <article class="tpc" data-t="langchain"><small>LangChain</small><h4>Best use of deepagents</h4>
+        <dl><dt>They ask</dt><dd>Build a deepagent for any use case.</dd>
+        <dt>Roll Call</dt><dd>Counselor assistant on Deep Agents: answers questions like “why are Route 7 kids out?” with cited messages, read-only tools and no ability to send.</dd></dl>
+        <div class="tp-prize">Special track</div></article>
+      <article class="tpc" data-t="chatoverflow"><small>ChatOverflow</small><h4>Agent Leaderboard</h4>
+        <dl><dt>They ask</dt><dd>Connect your coding agent so it shares general, non-sensitive insights with other agents. No extra submission.</dd>
+        <dt>Roll Call</dt><dd>Our coding agent worked on the leaderboard while we built. Nothing project-specific or personal is shared.</dd></dl>
+        <div class="tp-prize">$500 / $250 / $150 · $100 raffle</div></article>
+      <article class="tpc tp-rule"><small>Ground rules</small><h4>Built for Newark families</h4>
+        <dl><dt>Data</dt><dd>The district owns it, in its own TigerData database. Names are swapped for placeholders before any model call.</dd>
+        <dt>People</dt><dd>A human approves every message. Counselors own every safety case. Dollars stay in aggregate.</dd></dl></article>
+    </div>
+  </div>
+  <div class="chrome"><span>ROLL CALL · WHEREAREALLTHEKIDSANDHOWMUCHISTHISCOSTINGUS.US</span><span>05 · TECH STACK</span></div>
 </section>
 
 </div></div>
@@ -866,7 +1164,7 @@
     { t: "Comparing fractions", m: "Math · missed Nov 12 · 20 min" }
   ];
   const DAYS = { bus: 27, ill: 14, other: 38 };
-  const TITLES = { case: ["Case queue", "Clerk view"], clusters: ["Root-cause clusters", "School records only"], plans: ["Action plans", "Needs clerk approval"], learn: ["Catch-up plans", "Lily W. · Grade 4"], rev: ["Revenue", "Business manager view"], esc: ["Escalations", "Counselor view"] };
+  const TITLES = { case: ["Case queue", "Clerk view"], clusters: ["Root-cause clusters", "Stage 1 records · Stage 2 replies"], plans: ["Action plans", "Needs clerk approval"], learn: ["Catch-up plans", "Lily W. · Grade 4"], rev: ["Revenue", "Business manager view"], esc: ["Escalations", "Counselor view"] };
 
   let st;
   function reset() {
@@ -906,16 +1204,22 @@
     }
     if (c.status === "pending") det += `<div class="rs"><span class="badge pend">classifying…</span></div>`;
     else if (c.status === "reason") det += `<div class="rs pop"><span class="chip ok">Barrier <i>✓ ${esc(c.label)}</i></span><span class="chip">${c.conf}% confidence</span><span class="chip">Evidence “${esc(c.ev)}”</span><div class="note">The clerk sees the original message beside the label, so every label can be checked.</div></div>`;
-    else if (c.status === "escalated") det += `<div class="alert pop"><b>Safety gate. A counselor takes over.</b> No automated reply was sent. This household is paused from all outreach until the counselor closes the case.</div>`;
+    else if (c.status === "escalated") det += `<div class="alert pop"><b>Safety gate. A counselor takes over.</b> No automated reply was sent, and the on-call counselor is paged. Gemini can add a safety flag but never remove the keyword one. The household is paused from all outreach until the counselor closes the case.</div>`;
     else det += `<div class="empty">Waiting on the family. Tap a reply under the phone.</div>`;
     return `<div class="qlist">${list}</div><div class="detail">${det}</div>`;
   }
   function viewClusters() {
-    const card = (k, name, cause, n, line, src) => `<div class="cc"><div class="top"><h3>${name}</h3><span class="badge pend">${cause}</span></div><div class="amt">${fmt(DAYS[k] * st.rate)}<small>at risk this week</small></div><p>${line}</p><div class="srcs">${src}</div><button class="go" data-plan="${k}">Draft action plan →</button></div>`;
+    const named = { bus: cs("S002").status === "reason", ill: true };
+    const card = (k, name, cause, obs, exp, p, line, src) => {
+      const ok = named[k];
+      const badge = ok ? `<span class="badge ok">✓ ${cause}</span>` : `<span class="badge pend">cause provisional</span>`;
+      const stg = `<div class="stg"><span class="on">1 · records flagged it</span><span class="${ok ? "on" : ""}">2 · replies named it</span></div>`;
+      return `<div class="cc"><div class="top"><h3>${name}</h3>${badge}</div><div class="oe"><span>observed <b>${obs}</b></span><span>expected <b>${exp}</b></span><span>p <b>${p}</b></span></div><div class="amt">${fmt(DAYS[k] * st.rate)}<small>at risk this week</small></div><p>${ok ? line : "Hotspot found. Waiting for a family reply before naming the cause."}</p>${stg}<div class="srcs">${src}</div><button class="go" data-plan="${k}" ${ok ? "" : "disabled"}>Draft action plan →</button></div>`;
+    };
     return `<div class="cx">
-      ${card("bus", "Route 7 bus", "transportation", 9, "9 students, out the same 3 days.", `<span class="chip">Dev K.: “The bus never came”</span><span class="chip">Mateo R.: “el autobús…”</span><span class="chip">+7 more</span>`)}
-      ${card("ill", "Room 104", "illness", 7, "7 students, spreading day by day.", `<span class="chip">Ana C.: “fiebre y tos”</span><span class="chip">Lily W.: “fever…”</span><span class="chip">+5 more</span>`)}
-    </div><div class="cnote">Built from message text plus school records. Friendships are never inferred.</div>`;
+      ${card("bus", "Route 7 bus", "transportation", 9, "2.1", "0.005", "9 riders out the same 3 days. Replies say the bus never came.", `<span class="chip">Dev K.: “The bus never came”</span>${named.bus ? `<span class="chip">Mateo R.: “no pasó otra vez hoy”</span>` : ""}<span class="chip">+7 riders</span>`)}
+      ${card("ill", "Room 104", "illness", 7, "1.8", "0.01", "7 students, spreading day by day. Replies say fever.", `<span class="chip">Ana C.: “fiebre y tos”</span><span class="chip">+6 more</span>`)}
+    </div><div class="cnote">${named.bus ? "The alarm stayed the same; the reply made the cause specific." : "Simulate Mateo's Spanish reply under the phone to name Route 7's cause."} Friendships are never inferred.</div>`;
   }
   function viewPlans() {
     const k = st.plan, P = PLANS[k], done = !!st.sent[k];
@@ -999,6 +1303,128 @@
 
   reset(); renderSim(); render(false);
   window.__resetDemo = () => { reset(); render(true); };
+})();
+
+/* ---------- slide 4: detectors, results, luck test ---------- */
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const DATA = {
+    all: { v: [53, 42, 30, 19], cap: "100 planted events. Tuned on one school (Marseille), tested once on another (Lyon). The two-stage detector finds as many clusters as network-only (56%) but names the right cause far more often." },
+    mixed: { v: [63, 33, 33, 40], cap: "30 cases built to fool one layer: a road closure that looks like a neighborhood, caregiving across a class, illness on a bus. Network-only guesses the cause from the group type and gets most of them wrong." },
+    records: { v: [53, 42, 31, 19], cap: "Same test with school records only: rosters, routes, households. Schools can't collect contact sensors, and the result doesn't change, because most contact happens inside the classroom." }
+  };
+  const NAMES = ["Two-stage (ours)", "Network only", "Combined", "Replies only"];
+  function bars(m) {
+    const d = DATA[m];
+    $("bars").innerHTML = NAMES.map((n, i) => `<div class="hb${i === 0 ? " win" : ""}"><span>${n}</span><div class="tr"><i data-w="${d.v[i]}"></i></div><span>${d.v[i]}%</span></div>`).join("");
+    $("resCap").textContent = d.cap;
+    requestAnimationFrame(() => setTimeout(() => document.querySelectorAll("#bars i").forEach((e) => (e.style.width = e.dataset.w + "%")), 30));
+    document.querySelectorAll("#resSeg button").forEach((b) => b.classList.toggle("on", b.dataset.m === m));
+  }
+  $("resSeg").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) bars(b.dataset.m); });
+
+  // Luck test: shuffle absence dates and count Route 7 riders out in the window (seeded, so the demo is stable).
+  const MAXK = 10, OBS = 9;
+  function shuffleCounts() {
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    const hist = new Array(MAXK + 1).fill(0);
+    for (let r = 0; r < 199; r++) {
+      let k = 0; for (let j = 0; j < 30; j++) if (rnd() < 2.1 / 30) k++;   // ~Poisson(2.1)
+      hist[Math.min(k, MAXK)]++;
+    }
+    return hist;
+  }
+  function drawHist(h, show) {
+    const mx = Math.max(...h, 1);
+    $("hist").innerHTML = h.map((n, k) => `<i class="${k === OBS ? "obs" : ""}" data-h="${k === OBS ? 100 : (n / mx) * 100}"></i>`).join("") + `<div class="ax"><span>0</span><span>riders out by chance</span><span>${MAXK}+</span></div>`;
+    if (show) setTimeout(() => document.querySelectorAll("#hist i").forEach((e, k) => setTimeout(() => (e.style.height = (e.dataset.h > 0 ? Math.max(e.dataset.h, 3) : 0) + "%"), k * 40)), 30);
+  }
+  let luckTimer;
+  function runLuck() {
+    const h = shuffleCounts(), hits = h.slice(OBS).reduce((a, b) => a + b, 0);
+    drawHist(h, true);
+    $("luckOut").textContent = `${hits} of 199 shuffles reached ${OBS} · p = ${((hits + 1) / 200).toFixed(3)} · red = what happened`;
+  }
+
+  function reset() {
+    document.querySelectorAll(".det").forEach((d) => d.classList.remove("open"));
+    bars("all"); drawHist(new Array(MAXK + 1).fill(0), false); $("luckOut").textContent = "";
+    clearTimeout(luckTimer); luckTimer = setTimeout(runLuck, 700);
+  }
+  const slide = $("how");
+  new MutationObserver(() => { if (slide.classList.contains("active")) reset(); }).observe(slide, { attributes: true, attributeFilter: ["class"] });
+  reset();
+})();
+
+/* ---------- track panel on the stack slide ---------- */
+(() => {
+  const panel = document.getElementById("trkPanel"), grid = panel.querySelector(".tp-grid");
+  function open(t) {
+    panel.classList.add("open"); panel.setAttribute("aria-hidden", "false");
+    grid.classList.toggle("focus", t !== "all");
+    grid.querySelectorAll(".tpc").forEach((c) => c.classList.toggle("hl", c.dataset.t === t));
+  }
+  function close() { panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true"); }
+  document.querySelector("#stk .trkrow").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) open(b.dataset.t); });
+  document.getElementById("trkClose").addEventListener("click", close);
+  grid.addEventListener("click", (e) => { const c = e.target.closest(".tpc[data-t]"); if (c) open(c.dataset.t); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+  const slide = document.getElementById("stk");
+  new MutationObserver(() => { if (!slide.classList.contains("active")) close(); }).observe(slide, { attributes: true, attributeFilter: ["class"] });
+})();
+
+/* ---------- slide 4: school network graph ---------- */
+(() => {
+  const svg = document.getElementById("netSvg"); if (!svg) return;
+  const COL = { I: "var(--r-ill)", T: "var(--r-bus)", C: "var(--r-care)", D: "var(--r-oth)", A: "var(--r-oth)", "?": "var(--r-oth)" };
+  const NAME = { I: "Illness", T: "Transportation", C: "Caregiving", D: "Disengagement", A: "Appointment or travel", "?": "Unclear reply", W: "Awaiting reply", P: "Present" };
+  const ROOMS = [
+    ["Room 104", 160, 140, "IIIIIW"], ["Room 105", 395, 82, "CPW"], ["Room 201", 625, 118, "?TPP"],
+    ["Room 401", 105, 350, "DWP"], ["Room 301", 360, 290, "TCWP"], ["Room 202", 610, 310, "ATWP"],
+    ["Room 302", 255, 452, "WPP"], ["Room 402", 520, 450, "AWP"]
+  ];
+  const N = [];
+  ROOMS.forEach(([room, cx, cy, codes]) => {
+    const n = codes.length, r = n >= 6 ? 62 : n >= 4 ? 50 : 42;
+    [...codes].forEach((c, i) => { const a = (-90 + i * 360 / n) * Math.PI / 180; N.push({ id: N.length, room, c, x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) }); });
+  });
+  const pick = (room, c, k = 0) => N.filter((n) => n.room === room && n.c === c)[k];
+  // Route 7 in stop order, and the households the SIS knows about.
+  const ROUTE = [pick("Room 105", "W"), pick("Room 201", "T"), pick("Room 202", "T"), pick("Room 202", "W"), pick("Room 301", "W"), pick("Room 301", "T")];
+  const HOMES = [[pick("Room 105", "C"), pick("Room 301", "C")], [pick("Room 302", "W"), pick("Room 402", "P")]];
+  const line = (a, b, cls) => `<line class="e ${cls}" x1="${a.x.toFixed(1)}" y1="${a.y.toFixed(1)}" x2="${b.x.toFixed(1)}" y2="${b.y.toFixed(1)}"/>`;
+  let h = "";
+  // Room 104 cluster hull (classroom layer) and Route 7 halo (bus layer), drawn under everything.
+  const m104 = N.filter((n) => n.room === "Room 104"), xs = m104.map((n) => n.x), ys = m104.map((n) => n.y);
+  const hx = Math.min(...xs) - 30, hy = Math.min(...ys) - 30, hw = Math.max(...xs) - hx + 30, hh = Math.max(...ys) - hy + 30;
+  h += `<g class="hull" data-l="room"><rect x="${hx}" y="${hy}" width="${hw}" height="${hh}" rx="34" fill="#eb6834" fill-opacity=".1" stroke="#eb6834" stroke-width="2"/><text class="cl" x="${hx + hw / 2}" y="${hy - 10}" text-anchor="middle">Room 104 · illness · 5 of 6 out</text></g>`;
+  h += `<g class="hull" data-l="bus"><polyline points="${ROUTE.map((n) => `${n.x.toFixed(1)},${n.y.toFixed(1)}`).join(" ")}" fill="none" stroke="#2a78d6" stroke-opacity=".14" stroke-width="30" stroke-linejoin="round" stroke-linecap="round"/><text class="cl" x="652" y="210" text-anchor="end" style="fill:#1f5fae">Route 7 · 3 say bus, 3 awaiting</text></g>`;
+  // Edges by layer.
+  ROOMS.forEach(([room]) => { const m = N.filter((n) => n.room === room); m.forEach((a, i) => m.slice(i + 1).forEach((b) => (h += line(a, b, "room")))); });
+  ROUTE.slice(1).forEach((b, i) => (h += line(ROUTE[i], b, "bus")));
+  HOMES.forEach(([a, b]) => (h += line(a, b, "home")));
+  h += `<g class="hull" data-l="home"><text class="rl" x="${(HOMES[0][0].x + HOMES[0][1].x) / 2 + 12}" y="${(HOMES[0][0].y + HOMES[0][1].y) / 2}" style="fill:var(--ink)">siblings · caregiving</text></g>`;
+  // Room labels.
+  ROOMS.forEach(([room, cx, cy, codes]) => { if (room !== "Room 104") { const r = codes.length >= 4 ? 50 : 42; h += `<text class="rl" x="${cx}" y="${cy - r - 22}" text-anchor="middle">${room}</text>`; } });
+  // Nodes.
+  N.forEach((n) => {
+    const tip = `<title>${n.room} · ${NAME[n.c]}</title>`;
+    if (n.c === "P") h += `<g class="n" style="transform-origin:${n.x}px ${n.y}px">${tip}<circle cx="${n.x}" cy="${n.y}" r="7" fill="#d3d2cb" stroke="#fff" stroke-width="2"/></g>`;
+    else if (n.c === "W") h += `<g class="n" style="transform-origin:${n.x}px ${n.y}px">${tip}<circle cx="${n.x}" cy="${n.y}" r="13" fill="#fff" stroke="#6c7480" stroke-width="2.2" stroke-dasharray="4 3"/></g>`;
+    else h += `<g class="n" style="transform-origin:${n.x}px ${n.y}px">${tip}<circle cx="${n.x}" cy="${n.y}" r="16" fill="${COL[n.c]}" stroke="#fff" stroke-width="2"/><text x="${n.x}" y="${n.y + 5}" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">${n.c}</text></g>`;
+  });
+  svg.innerHTML = h;
+  // Legend with counts (identity never by color alone: letters + names).
+  const cnt = (c) => N.filter((n) => n.c === c).length, oth = cnt("D") + cnt("A") + cnt("?");
+  const dot = (c, l) => `<i class="dot" style="background:${COL[c]}">${l}</i>`;
+  document.getElementById("netLeg").innerHTML =
+    `<span>${dot("I", "I")}Illness <b>${cnt("I")}</b></span><span>${dot("T", "T")}Transportation <b>${cnt("T")}</b></span><span>${dot("C", "C")}Caregiving <b>${cnt("C")}</b></span>` +
+    `<span>${dot("D", "+")}Other reasons <b>${oth}</b></span><span><i class="await"></i>Awaiting reply <b>${cnt("W")}</b></span><span><i class="pres"></i>Present <b>${cnt("P")}</b></span>`;
+  document.getElementById("lyr").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    b.classList.toggle("on"); const on = b.classList.contains("on"), l = b.dataset.l;
+    svg.querySelectorAll(`.e.${l}, .hull[data-l="${l}"]`).forEach((el) => el.classList.toggle("off", !on));
+  });
 })();
 
 </script>
